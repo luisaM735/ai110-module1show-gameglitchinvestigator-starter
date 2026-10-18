@@ -49,7 +49,7 @@ I decided if a bug was really fixed by applying the changes to the code, saving 
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit? 
 
-I would explain Streamlit reruns as a way to see the changes made to your code almost immediately. To see any changes made, simply refresh the website and try again to see the new output.
+I would explain Streamlit reruns as a way to see changes made to your code almost immediately. Whenever you interact with the app, such as clicking a button, Streamlit reruns the Python script and updates the output on the website. This allows you to see the results of your interactions. Furthermore, session state allows the app to remember information, such as a score or user input, between reruns. It is essentiallt the last state the session was in.
 
 ---
 
@@ -59,3 +59,6 @@ I would explain Streamlit reruns as a way to see the changes made to your code a
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+
+
+One strategy I would would want to reuse in future labs or projects is marking the "crime scene" in my code to tell AI explicitly where the code is wrong and where I need the changes to be made. One thing I would do differently next time is give step by step of what I need it to do instead of just telling AI what I need output to be. Moreover, this project changed the way I think about AI generated code by seeing it as a tool that I guide rather than a tool that already knows.
