@@ -35,11 +35,11 @@ It wrote the code, ran away, and now the game is unplayable.
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- User types in a number in the input field under "Enter your guess:" -->
-2. <!-- Once the user has decided on a guess, click Submit guess -->
-3. <!-- The game will provide a hint - "Go HIGER" or "Go LOWER" -->
-4. <!-- The user uses the hint to continue guessing -->
-5. <!-- Repeat steps 3 and 4 until user is correct or user runs out of attempts -->
+1. User types in a number in the input field under "Enter your guess:"
+2. Once the user has decided on a guess, click Submit guess
+3. The game will provide a hint - "Go HIGER" or "Go LOWER"
+4. The user uses the hint to continue guessing
+5. Repeat steps 3 and 4 until user is correct or user runs out of attempts and click new game to generate a new game
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
