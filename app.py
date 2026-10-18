@@ -35,15 +35,15 @@ def check_guess(guess, secret):
 
     try:
         if guess > secret:
-            return "Too High", "📈 Go LOWER!" #problem #2 fixed
+            return "Too High", "📈 Go LOWER!" #Bug #2 fixed, switched return logic
         else:
-            return "Too Low", "📉 Go HIGHER!"
+            return "Too Low", "📉 Go HIGHER!" #Here too (bug #2)
     except TypeError:
         g = str(guess)
         if g == secret:
             return "Win", "🎉 Correct!"
         if g > secret:
-            return "Too High", "📈 Go LOWER!"
+            return "Too High", "📈 Go LOWER!" #This line and the next as well (bug #2)
         return "Too Low", "📉 Go HIGHER!"
 
 
@@ -93,7 +93,7 @@ if "secret" not in st.session_state:
     st.session_state.secret = random.randint(low, high)
 
 if "attempts" not in st.session_state:
-    st.session_state.attempts = 0 #change here for the first bug
+    st.session_state.attempts = 0 #Bug fix, was at 1, changed to 0.
 
 if "score" not in st.session_state:
     st.session_state.score = 0

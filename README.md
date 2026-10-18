@@ -25,19 +25,21 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
-
+- [ ] The purpose of this game is for the user to guess the secret value.
+- [ ] Two bugs were found:
+      1. Attempts allowed was not equal to the attempts left.
+      2. The hints were wrong.
+- [ ] The solution applied to the first bug was that in the code block ' if "attempts" not in st.session_state:
+    st.session_state.attempts = 0', st.session_state.attempts was at first set to 1 which is what caused the inconsistency in the number of attempts that the user had, so instead I set it to 0. To continue, for the second bug the solution applied was simply switching the return logic within the check_guess function. So if it said "Go LOWER", it was changed to "Go HIGHER" and vice versa.
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. <!-- User types in a number in the input field under "Enter your guess:" -->
+2. <!-- Once the user has decided on a guess, click Submit guess -->
+3. <!-- The game will provide a hint - "Go HIGER" or "Go LOWER" -->
+4. <!-- The user uses the hint to continue guessing -->
+5. <!-- Repeat steps 3 and 4 until user is correct or user runs out of attempts -->
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
