@@ -8,15 +8,18 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
 
+The first time the game was ran, at first glance everything looked fine. There were some descrepanices. Two bugs were found in the game. First being that the "attempts allowed" on the left side panel and the "attempts left" in the center main field did not match. The second broken logic was the hints that were given when a user guessed a number, being either "go higher" or " go lower", were backwards.
+
+
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+|Attempts |Attempts should be 8 |Attempts was 7 |Console Ouput: none/ |
+|Hints |Hints should be "go higher" if guess is lower than secret value, and "go lower" if the guess is higher |The hints are wrong, they're reversed |Console Ouput: none/ |
+|New Game |Resets game | Doesn't generate new secret value nor clear the input value for the user to pplay again |Console Ouput: none/ |
 
 ---
 
@@ -25,6 +28,9 @@ Document at least 3 bugs you found. Add rows as needed.
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
 - Give one example of an AI suggestion you did not accept as written (including what the AI suggested, why you rejected or changed it, and how you verified your version). It does not have to be a suggestion that was wrong: over-engineered, out of scope, harder to read, or a poor fit for this codebase all count.
+
+The AI tool used on this project was Claude.
+For instance, when dealing with the reversed hint logic, I provided AI with the relevant code block that was affecting the output, along with some context of what it was doing and what I needed. It then suggested that I simply switch the logic, switch the hint "Go Lower" with "Go Higher" and vice versa. Furthermore, the AI did not provide a suggestion that I did not accept.
 
 ---
 
@@ -35,11 +41,15 @@ Document at least 3 bugs you found. Add rows as needed.
   and what it showed you about your code.
 - Did AI help you design or understand any tests? How?
 
+I decided if a bug was really fixed by applying the changes to the code, saving it, refreshing the game, and trying out the use case to see if the result was correct or wrong again. For instance, once I applied the suggested AI solution from claude on my code and saved it, I gave the input a lower number than the secret value to see if the game would output the correct value, then I did the same for an input value higher than the secret value and the output was correct. I did not ask AI to help me design any tests.
+
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
-- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit? 
+
+I would explain Streamlit reruns as a way to see the changes made to your code almost immediately. To see any changes made, simply refresh the website and try again to see the new output.
 
 ---
 
